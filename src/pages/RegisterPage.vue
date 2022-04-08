@@ -20,11 +20,11 @@
 </template>
 
 <script lang="ts">
-import {ref} from 'vue'
+import {defineComponent, ref} from 'vue'
 import axios from 'axios'
 import {useRouter} from 'vue-router'
 
-export default {
+export default defineComponent({
   name: "RegisterPage",
   setup(){
     const firstName = ref('')
@@ -44,12 +44,9 @@ export default {
           password_confirm: passwordConfirm.value
         })
         await router.push('/login')
-        console.log(data)
       } catch(error){
         console.log(error)
       }
-
-      //console.log(data)
     }
 
     return {
@@ -61,7 +58,7 @@ export default {
       submit
     }
   }
-}
+})
 </script>
 
 <style scoped>

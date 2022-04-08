@@ -62,7 +62,7 @@
 <script lang="ts">
 import axios from 'axios'
 import { defineComponent,ref,onMounted } from 'vue'
-import PaginatorComponent from '@/components/PaginatorComponent.vue'
+import PaginatorComponent from '@/common/components/PaginatorComponent.vue'
 
 
 export default defineComponent({

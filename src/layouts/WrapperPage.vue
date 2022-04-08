@@ -19,6 +19,7 @@ import axios from 'axios'
 import {onMounted,defineComponent} from 'vue'
 import {useRouter} from 'vue-router'
 import { useStore } from "vuex"
+import { Api } from "@/services/Api"
 
 export default defineComponent({
   name: 'WrapperPage',
@@ -27,13 +28,12 @@ export default defineComponent({
     const store = useStore()
     const router = useRouter()
     onMounted(async ()=>{
-      try{
-        const {data} = await axios.get('user')
-
-        store.dispatch('User/setUser', data)
-      }catch (e){
-        await router.push('/login')
-      }
+        Api.getUser().then(response =>{
+          const {data} = response
+          store.dispatch('User/setUser', data)
+        }).catch( error =>{
+          console.log(error)
+        })
 
     })
   }

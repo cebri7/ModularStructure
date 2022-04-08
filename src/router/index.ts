@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
+//layouts
+import WrapperPage from '@/layouts/WrapperPage.vue'
 
 import DashboardPage from '@/pages/DashboardPage.vue'
 import RegisterPage from '@/pages/RegisterPage.vue'
 import LoginPage from '@/pages/LoginPage.vue'
-import WrapperPage from '@/pages/WrapperPage.vue'
 import ProfilePage from '@/pages/ProfilePage.vue'
 
 //routes from the module

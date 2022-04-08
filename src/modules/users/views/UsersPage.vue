@@ -34,13 +34,13 @@
 </template>
 
 <script lang="ts">
-import {onMounted, ref} from 'vue'
+import {defineComponent, onMounted, ref} from 'vue'
 import {User} from '@/models/user'
 import axios from 'axios'
-import PaginatorComponentVue from '@/components/PaginatorComponent.vue'
+import PaginatorComponentVue from '@/common/components/PaginatorComponent.vue'
 
 
-export default{
+export default defineComponent({
   name: 'UsersPage',
   components: {PaginatorComponentVue},
   setup(){
@@ -75,5 +75,5 @@ export default{
       del
     }
   }
-}
+})
 </script>

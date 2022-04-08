@@ -29,7 +29,7 @@
 import axios from 'axios'
 import { defineComponent, reactive } from 'vue'
 import { useRouter } from 'vue-router'
-import ImageUpload from '@/components/ImageUpload.vue'
+import ImageUpload from '@/common/components/ImageUpload.vue'
 
 export default defineComponent({
     name: "ProductCreate",

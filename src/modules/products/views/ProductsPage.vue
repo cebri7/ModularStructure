@@ -41,7 +41,7 @@
 import {onMounted, ref, watch, defineComponent} from 'vue'
 import axios from 'axios'
 import {Products} from '@/models/products'
-import PaginatorComponentVue from '@/components/PaginatorComponent.vue'
+import PaginatorComponentVue from '@/common/components/PaginatorComponent.vue'
 
 export default defineComponent({
     name: 'ProductsPage',
